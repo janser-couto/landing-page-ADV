@@ -1753,7 +1753,7 @@ p {
     width: 160px;
   }
 
-  .menu-toggle {
+    .menu-toggle {
     display: block;
     position: relative;
     z-index: 1002;
@@ -1765,31 +1765,23 @@ p {
     top: 100%;
     left: 0;
     right: 0;
-    width: 100vw;
-    box-sizing: border-box;
 
     display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 22px;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
 
-    min-height: 62px;
-    padding: 12px 20px;
+    max-height: calc(100dvh - 70px);
+    overflow-y: auto;
+    overscroll-behavior-y: contain;
+    -webkit-overflow-scrolling: touch;
+
+    padding: 25px 20px 35px;
 
     background: rgba(11, 13, 16, 0.98);
 
     backdrop-filter: blur(18px);
     -webkit-backdrop-filter: blur(18px);
-
-    overflow-x: auto;
-    overflow-y: hidden;
-    overscroll-behavior-x: contain;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: thin;
-    scrollbar-color: var(--color-accent) rgba(255, 255, 255, 0.08);
-    touch-action: pan-x;
 
     opacity: 0;
     pointer-events: none;
@@ -1807,27 +1799,10 @@ p {
   }
 
   .main-navigation > a {
-    flex: 0 0 auto;
-    padding: 10px 0;
-
-    border-bottom: 0;
-
-    color: var(--color-white);
-    font-size: 0.9rem;
-    white-space: nowrap;
+    display: block;
+    padding: 14px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   }
-
-  .main-navigation .nav-cta {
-    flex: 0 0 auto;
-    margin-top: 0;
-    padding: 11px 16px;
-
-    border-color: var(--color-accent);
-
-    text-align: center;
-    white-space: nowrap;
-  }
-
   /* Hero */
 
   .hero {
